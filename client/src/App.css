@@ -1,31 +1,19 @@
+/* Orange and white theme */
 :root {
-  --bg: #f4f5f7;
+  --bg: #ffffff;
   --card: #ffffff;
-  --text: #1f2933;
-  --muted: #7b8794;
-  --border: #e4e7eb;
-  --accent: #4f46e5;
-  --accent-hover: #4338ca;
+  --text: #292524;
+  --muted: #78716c;
+  --border: #fed7aa;
+  --row-hover: #fff7ed;
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
   --danger: #dc2626;
   --error-bg: #fef2f2;
 
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--text);
   background: var(--bg);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111827;
-    --card: #1f2937;
-    --text: #f3f4f6;
-    --muted: #9ca3af;
-    --border: #374151;
-    --accent: #818cf8;
-    --accent-hover: #a5b4fc;
-    --danger: #f87171;
-    --error-bg: #3b1d1d;
-  }
 }
 
 * {
@@ -54,8 +42,9 @@ h1 {
 .card {
   background: var(--card);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.12);
   overflow: hidden;
 }
 
@@ -139,6 +128,10 @@ button:disabled {
   gap: 12px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--border);
+}
+
+.todo-item:hover {
+  background: var(--row-hover);
 }
 
 .todo-item input[type='checkbox'] {
@@ -237,8 +230,9 @@ button:disabled {
 }
 
 .filters button.active {
+  background: var(--accent);
   border-color: var(--accent);
-  color: var(--accent);
+  color: #fff;
 }
 
 .hint {
